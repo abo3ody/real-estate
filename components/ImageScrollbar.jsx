@@ -42,8 +42,14 @@ export default function ImageSrollbar({ data }) {
          RightArrow={RightArrow}
          style={{ overflow: "hidden" }}
       >
-         {data.map((item) => (
-            <Box width="910px" itemId={item.id} overflow="hidden" p="1">
+         {data.map((item, index) => (
+            <Box
+               width="910px"
+               itemId={item.id}
+               overflow="hidden"
+               p="1"
+               key={index}
+            >
                <Image
                   placeholder="blur"
                   blurDataURL={item.url}

@@ -25,7 +25,6 @@ export default function SearchFilters() {
    const [loading, setLoading] = useState(false);
    const router = useRouter();
 
-   console.log(router.query);
    const searchProperties = (filterValues) => {
       const path = router.pathname;
       const { query } = router;
@@ -138,7 +137,7 @@ export default function SearchFilters() {
                               marginTop="5"
                               marginBottom="5"
                            >
-                              <Image src={noresult} />
+                              <Image src={noresult} alt="noresult" />
                               <Text fontSize="xl" marginTop="3">
                                  Waiting to search!
                               </Text>
